@@ -1,4 +1,4 @@
-        var version = "0.0.31";
+        var version = "0.0.31_1";
 
         
         console.log("version: "+version);
@@ -48,7 +48,7 @@
                 var regex = /(\S*)-(\S*)_(\S*) (\S*)/gi;
                 match = regex.exec(text);
                     
-                elements[i].getElementsByTagName("span")[0].innerHTML = "<b>"+match[1]"-"+match[2]+"</b> "+match[3]+" "+match[4];
+                elements[i].getElementsByTagName("span")[0].innerHTML = "<b>"+match[1]+"-"+match[2]+"</b> "+match[3]+" "+match[4];
 
             }
         }
