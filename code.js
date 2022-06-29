@@ -1,5 +1,7 @@
+        var version = "0.0.23";
 
-        console.log("version: 0.0.22");
+        
+        console.log("version: "+version);
         var loaded = false;
         scan_users();
         setInterval(function () {
@@ -31,7 +33,7 @@
                 
             chat = document.getElementsByClassName("ReactVirtualized__Grid__innerScrollContainer")[1];
             chat.style = "width: auto;  max-width: 362px;  overflow: hidden; pointer-events: none; position: relative;";
-            generate_message("Скрипт загружен");
+            generate_message("Скрипт версии "+version+". Был успешно загружен.");
         }
 
         function scan_users() {
