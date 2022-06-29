@@ -1,5 +1,5 @@
 
-        console.log("version: 0.0.19");
+        console.log("version: 0.0.20");
         var loaded = false;
         scan_users();
         setInterval(function () {
@@ -32,6 +32,11 @@
         }
 
         function scan_users() {
+            if(document.getElementById("currentSlideText")!=null){
+             element = document.getElementById("currentSlideText");
+             element.parentNode.removeChild(element);
+            }
+                
             var elements = document.getElementsByClassName("userNameMain--2fo2zM");
             for (var i = 0; i < elements.length; i++) {
                 var text = elements[i].getElementsByTagName("span")[0].innerText;
@@ -55,6 +60,7 @@
             style.innerText = style.innerText + ".made{position:absolute;bottom:20px;right:45px;color:#acb1b7;}";
             style.innerText = style.innerText + ".simple_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 100%;border: 12px solid #fff;}.simple_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
             style.innerText = style.innerText + ".simple_stop_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 4px;border: 12px solid #fff;}.simple_stop_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
+            style.innerText = style.innerText + "span{position:relative !important;top: auto !important;}";
             
             head.appendChild(style);
         }
