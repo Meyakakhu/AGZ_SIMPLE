@@ -60,8 +60,9 @@
                     var count = 0;
                     for(var j = 0; j<groups.length; j++){
                         if(groups[i]==group){
-                            if(counts.length>=i) {counts[i] = counts[i]+1;} else {counts[i] = 1;}
+                            if(counts.length>=i) {counts[i] = counts[i]+1;console.log("count: "+counts[i]);} else {counts[i] = 1;console.log("count1: "+counts[i]);}
                             count = counts[i];
+                            console.log("count2:"+count);
                         }
                     }
                     if(document.getElementById(group)==null){
