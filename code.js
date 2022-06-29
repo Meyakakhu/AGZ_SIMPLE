@@ -1,5 +1,5 @@
 
-        console.log("version:0.0.1");
+        console.log("version: 0.0.2");
         var loaded = false;
         scan_users();
         setInterval(function () {
@@ -46,6 +46,8 @@
             style.innerText = style.innerText + ".settings_title{width:100%;text-align: center; color:#000;font-size: 24px;padding-top:30px;padding-bottom:30px;}";
             style.innerText = style.innerText + ".made{position:absolute;bottom:20px;right:45px;color:#acb1b7;}";
             style.innerText = style.innerText + ".simple_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 100%;border: 12px solid #fff;}.simple_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
+            style.innerText = style.innerText + ".simple_stop_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 4px;border: 12px solid #fff;}.simple_stop_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
+            
             head.appendChild(style);
         }
 
@@ -108,6 +110,8 @@
          buttons_panel.appendChild(stop_record);     
         }
 
+        const start = document.getElementById("simple_stop_record_button");
+        const stop = document.getElementById("simple_record_button");
 
         async function startRecording() {
                 stream = await navigator.mediaDevices.getDisplayMedia({
