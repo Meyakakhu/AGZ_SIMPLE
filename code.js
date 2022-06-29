@@ -36,7 +36,7 @@
             for (var i = 0; i < elements.length; i++) {
                 var text = elements[i].getElementsByTagName("span")[0].innerText;
                 if (text.includes("Дмитрий Поляков")) {
-                    elements[i].getElementsByTagName("span")[0].innerText = "👑 Димитрий ";
+                    elements[i].getElementsByTagName("span")[0].innerText = "👑 ДимДимыч ";
                 }
                 if (text.includes("Коvпак Илья")) {
                     elements[i].getElementsByTagName("span")[0].innerText = "🦠 Илюшка ";
