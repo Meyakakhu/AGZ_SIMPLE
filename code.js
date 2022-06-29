@@ -1,5 +1,5 @@
 
-        console.log("version: 0.0.18");
+        console.log("version: 0.0.19");
         var loaded = false;
         scan_users();
         setInterval(function () {
