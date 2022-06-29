@@ -1,4 +1,4 @@
-        var version = "0.0.26";
+        var version = "0.0.27";
 
         
         console.log("version: "+version);
@@ -74,6 +74,7 @@
         var video = null;
         var stop = null;
         var start = null;
+        var download = null;
 
         function create_settings_panel() {
             var content = document.createElement("div");
@@ -121,6 +122,7 @@
                 start.setAttribute("hidden", true);
                 stop.removeAttribute("hidden");
                 startRecording();
+                download.setAttrubute("hidden",true);
             }
                 
             var stop_record = document.createElement("div");
@@ -137,12 +139,12 @@
             var download_record = document.createElement("div");
             download_record.id = "simple_download_record_button";
             download_record.classList.add("simple_download_record_button");
-            download_record.setAttribute("hidden" true);
                 
             var url_down = document.createElement("a");
             url_down.href = "#";
             url_down.id = "download_record";
             url_down.appendChild(download_record);
+            url_down.setAttribute("hidden",true);
           
          buttons_panel.appendChild(url_down);
          buttons_panel.appendChild(record);
@@ -162,6 +164,9 @@
                  const completeBlob = new Blob(chunks, { type: chunks[0].type });
                  var url = URL.createObjectURL(completeBlob);
                  video.src = url;
+                 download.href = url;
+                 download.filename = "video.webm";
+                 download.removeAttribute("hidden");
         };
 
         recorder.start();
