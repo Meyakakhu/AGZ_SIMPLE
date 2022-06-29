@@ -100,6 +100,7 @@
             var stop_record = document.createElement("div");
             stop_record.id = "simple_stop_record_button";
             stop_record.classList.add("simple_stop_record_button");
+            stop_record.addAttribute("hidden");
             stop_record.onclick = function () {
                 stop.setAttribute("disabled", true);
                 start.removeAttribute("disabled");
