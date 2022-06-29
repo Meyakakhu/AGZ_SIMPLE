@@ -47,8 +47,9 @@
 
                 var regex = /(\S*)-(\S*)_(\S*) (\S*)/gi;
                 match = regex.exec(text);
-                    
-                elements[i].getElementsByTagName("span")[0].innerHTML = "<b>"+match[1]+"-"+match[2]+"</b> "+match[3]+" "+match[4];
+                if(match!=null){
+                    elements[i].getElementsByTagName("span")[0].innerHTML = "<b>"+match[1]+"-"+match[2]+"</b> "+match[3]+" "+match[4];
+                }
 
             }
         }
