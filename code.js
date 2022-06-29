@@ -1,17 +1,6 @@
+    scan_users();
 setInterval(function(){
-        var elements = document.getElementsByClassName("userNameMain--2fo2zM");
-        for(var i=0;i<elements.length;i++){
-         var text = elements[i].getElementsByTagName("span")[0].innerText;
-            if(text.includes("Дмитрий Поляков")){
-             elements[i].getElementsByTagName("span")[0].innerText = "👑 Димитрий ";
-            }
-            if(text.includes("Коvпак Илья")){
-             elements[i].getElementsByTagName("span")[0].innerText = "🦠 Илюшка ";
-            }
-            if(text.includes("Павлов Алексей")){
-             elements[i].getElementsByTagName("span")[0].innerText = "🦠 Лешка ";
-            }
-        }
+    scan_users();
     },10000);
     setTimeout(function(){
     var settings_menu = document.getElementsByClassName("right--Z4dKWq")[0];
@@ -28,7 +17,21 @@ setInterval(function(){
     simple_settings.appendChild(trye);
     },1000);
 
-
+    function scan_users(){
+        var elements = document.getElementsByClassName("userNameMain--2fo2zM");
+        for(var i=0;i<elements.length;i++){
+         var text = elements[i].getElementsByTagName("span")[0].innerText;
+            if(text.includes("Дмитрий Поляков")){
+             elements[i].getElementsByTagName("span")[0].innerText = "👑 Димитрий ";
+            }
+            if(text.includes("Коvпак Илья")){
+             elements[i].getElementsByTagName("span")[0].innerText = "🦠 Илюшка ";
+            }
+            if(text.includes("Павлов Алексей")){
+             elements[i].getElementsByTagName("span")[0].innerText = "🦠 Лешка ";
+            }
+        }       
+    }
 
     function load_css(){
         var head = document.getElementsByTagName('head')[0];
