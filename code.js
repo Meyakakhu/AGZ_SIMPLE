@@ -1,4 +1,4 @@
-        var version = "0.0.32_2";
+        var version = "0.0.32_3";
 
         
         console.log("version: "+version);
@@ -31,7 +31,7 @@
             create_settings_panel();
             add_record_button();
                 
-            chat = document.getElementsByClassName("header--W8C2z")[0];
+            chat = document.getElementsByClassName("chat--111wNM")[0];
 
             generate_message("Скрипт версии <b>"+version+"</b> был успешно загружен.");
         }
