@@ -1,4 +1,4 @@
-    scan_users();
+scan_users();
 setInterval(function(){
     scan_users();
     },10000);
@@ -67,11 +67,42 @@ setInterval(function(){
         var made = document.createElement("div");
         made.innerText = "Made by Поляков Дмитрий";
         made.classList.add("made");
+        var screen_recorder = document.createElement("video");
+        screen_recorder.id = "simple_display_recorder";
+        screen_recorder.width = 700;
+        screen_recorder.height = 400;
+        screen_recorder.controls = true;
+        settings.appendChild(screen_recorder);
         settings.appendChild(title);
         settings.appendChild(made);
         content.appendChild(settings);
         var wrapper = document.getElementsByClassName("main--Z1w6YvE")[0];
         wrapper.appendChild(content);
+    }
 
+    function start_record(){
+                const start = async()=>{
+                const stream = await navigator.mediaDevices.getDisplayMedia(
+                    {
+                        video:{
+                            mediaSource:"screen",
+                        },
+                    });
 
+                    const data=[];
+                    const mediaRecorder= new MediaRecorder(stream);
+                    mediaRecorder.ondataavailable=(e=>{
+                        data.push(e.data);
+                    });
+                    mediaRecorder.start();
+                    mediaRecorder.onstop=(e=>{
+                        document.getElementById("simple_display_recorder").src = URL.createObjectURL(
+                            new Blob(data,{
+                                type: data[0].type,
+                            }),
+                        );
+                    });
+            };
+
+            start();   
     }
