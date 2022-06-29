@@ -1,4 +1,4 @@
-        var version = "0.0.34_3";
+        var version = "0.0.34_5";
 
         
         console.log("version: "+version);
@@ -17,8 +17,10 @@
                 
         }, 5000);
         var chat = null;
+        var mess_inp = null;
         function loadscript(){
             var settings_menu = document.getElementsByClassName("right--Z4dKWq")[0];
+            mess_inp = document.getElementById("message-input");
             var simple_settings = document.createElement("div");
             simple_settings.id = "simple_settings_f23f23f";
             simple_settings.innerText = "⚙️";
@@ -102,8 +104,8 @@
             style.innerText = style.innerText + "span{text-transform: capitalize;}a{text-decoration:none;}";
             style.innerText = style.innerText + ".group_name{padding:5px; color: #ddd;}";
             style.innerText = style.innerText + ".group_name{padding:5px; color: #ddd;}";
-            style.innerText = style.innerText + ".emoji_list{padding:20px;background: rgba(0,0,0,0.3);width: 400px;margin: 40px;border-radius: 10px;text-align: center;font-family: 'Consolas';font-size: 20px;height: 200px;overflow: auto;position:absolute;top:-250px;}";
-            style.innerText = style.innerText + ".emoji{font-size: 15px;padding:3px;}div#emojies_full_list {display: flex;flex-wrap: wrap;justify-content: space-between;align-content: space-around;align-items: center;}";
+            style.innerText = style.innerText + ".emoji_list{padding:20px;background: rgba(0,0,0,0.7); border-radius: 10px;text-align: center;font-family: 'Consolas';font-size: 20px;height: 30%;overflow: auto;position:absolute;top:-250px;z-index:99;margin:20px;}";
+            style.innerText = style.innerText + ".emoji{font-size: 21px;padding:3px;}div#emojies_full_list {display: flex;flex-wrap: wrap;justify-content: space-between;align-content: space-around;align-items: center;}";
             
             
             head.appendChild(style);
@@ -205,7 +207,7 @@
             buttons.appendChild(emoji_panel);
             load_emojies();
         }
-
+        
         async function load_emojies(){
             var id = document.getElementById("emojies_full_list");
 
@@ -213,36 +215,54 @@
               var emoji = document.createElement("div");
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
+              emoji.onclick = function(){
+                mess_inp.innerText = mess_inp.innerText+"&#"+i+";";
+              }
               id.appendChild(emoji);
             }
             for(var i=127744;i<=127776;i++){
               var emoji = document.createElement("div");
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
+              emoji.onclick = function(){
+                mess_inp.innerText = mess_inp.innerText+"&#"+i+";";
+              }
               id.appendChild(emoji);
             }
             for(var i=127789;i<=127891;i++){
               var emoji = document.createElement("div");
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
+              emoji.onclick = function(){
+                mess_inp.innerText = mess_inp.innerText+"&#"+i+";";
+              }
               id.appendChild(emoji);
             }
             for(var i=127903;i<=127955;i++){
               var emoji = document.createElement("div");
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
+              emoji.onclick = function(){
+                mess_inp.innerText = mess_inp.innerText+"&#"+i+";";
+              }
               id.appendChild(emoji);
             }
             for(var i=127968;i<=127984;i++){
               var emoji = document.createElement("div");
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
+              emoji.onclick = function(){
+                mess_inp.innerText = mess_inp.innerText+"&#"+i+";";
+              }
               id.appendChild(emoji);
             }
             for(var i=128000;i<=128317;i++){
               var emoji = document.createElement("div");
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
+              emoji.onclick = function(){
+                mess_inp.innerText = mess_inp.innerText+"&#"+i+";";
+              }
               id.appendChild(emoji);
             }
             for(var i=128331;i<=128359;i++){
@@ -250,6 +270,9 @@
               var emoji = document.createElement("div");
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
+              emoji.onclick = function(){
+                mess_inp.innerText = mess_inp.innerText+"&#"+i+";";
+              }
               id.appendChild(emoji);
               }
             }
@@ -257,18 +280,27 @@
               var emoji = document.createElement("div");
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
+              emoji.onclick = function(){
+                mess_inp.innerText = mess_inp.innerText+"&#"+i+";";
+              }
               id.appendChild(emoji);
             }
             for(var i=128640;i<=128709;i++){
               var emoji = document.createElement("div");
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
+              emoji.onclick = function(){
+                mess_inp.innerText = mess_inp.innerText+"&#"+i+";";
+              }
               id.appendChild(emoji);
             }
             for(var i=128756;i<=128764;i++){
               var emoji = document.createElement("div");
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
+              emoji.onclick = function(){
+                mess_inp.innerText = mess_inp.innerText+"&#"+i+";";
+              }
               id.appendChild(emoji);
             }
             for(var i=129292;i<=129535;i++){
@@ -276,7 +308,11 @@
               var emoji = document.createElement("div");
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
+              emoji.onclick = function(){
+                mess_inp.innerText = mess_inp.innerText+"&#"+i+";";
+              }
               id.appendChild(emoji);
+              
               }
             }
             for(var i=129648;i<=129670;i++){
@@ -284,6 +320,9 @@
               var emoji = document.createElement("div");
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
+              emoji.onclick = function(){
+                mess_inp.innerText = mess_inp.innerText+"&#"+i+";";
+              }
               id.appendChild(emoji);
               }
             }
@@ -292,6 +331,9 @@
               var emoji = document.createElement("div");
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
+              emoji.onclick = function(){
+                mess_inp.innerText = mess_inp.innerText+"&#"+i+";";
+              }
               id.appendChild(emoji);
               }
             }
