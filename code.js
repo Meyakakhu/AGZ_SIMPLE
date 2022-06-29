@@ -47,9 +47,6 @@
                 if (text.includes("Дмитрий Поляков")) {
                     elements[i].getElementsByTagName("span")[0].innerText = "👑 ДимДимыч ";
                 }
-                if (text.includes("Коvпак Илья")) {
-                    elements[i].getElementsByTagName("span")[0].innerText = "🦠 Илюшка ";
-                }
                 if (text.toLowerCase().includes("пб-20v") || text.toLowerCase().includes("пб-20в")) {
                     elements[i].getElementsByTagName("span")[0].innerText = "☭ "+text.toLowerCase().replace("пб-20в_","").replace("пб-20v_","");
                 }
@@ -72,7 +69,7 @@
             style.innerText = style.innerText + ".simple_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 100%;border: 12px solid #fff;}.simple_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
             style.innerText = style.innerText + ".simple_stop_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 4px;border: 12px solid #fff;}.simple_stop_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
             style.innerText = style.innerText + ".simple_download_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 4px;border: 12px solid #fff;}.simple_download_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
-            style.innerText = style.innerText + "span{position:relative !important;top: auto !important;text-transform: capitalize;}";
+            style.innerText = style.innerText + "span{text-transform: capitalize;}";
             
             head.appendChild(style);
         }
