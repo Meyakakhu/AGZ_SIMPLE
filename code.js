@@ -1,4 +1,4 @@
-        var version = "0.0.31_7";
+        var version = "0.0.32";
 
         
         console.log("version: "+version);
@@ -55,7 +55,12 @@
                 }
 
                 if(match!=null){
-                    var group = match[1]+"-"+match[2];
+                    var gr_type = match[1];
+                    var gr_name = match[2].toLowerCase();
+                    gr_name.replace("a","а").replace("v","в")
+
+                    var group = gr_type+"-"+gr_name
+                    
                     groups.push(group);
                     var count = 0;
                     for(var j = 0; j<groups.length; j++){
