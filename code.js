@@ -1,4 +1,4 @@
-        var version = "0.0.29_4";
+        var version = "0.0.29_5";
 
         
         console.log("version: "+version);
@@ -162,7 +162,8 @@
         const options = {
                 audioBitsPerSecond : 128000,
                 videoBitsPerSecond : 2500000,
-                mimeType : 'video/webm'
+                mimeType : 'video/webm',
+                codecs : 'H264'
         }
                
         recorder = new MediaRecorder(stream,options);
