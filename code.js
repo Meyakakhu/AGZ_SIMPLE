@@ -1,4 +1,4 @@
-        var version = "0.0.30";
+        var version = "0.0.30_1";
 
         
         console.log("version: "+version);
@@ -43,13 +43,7 @@
                 
             var elements = document.getElementsByClassName("userNameMain--2fo2zM");
             for (var i = 0; i < elements.length; i++) {
-                var text = elements[i].getElementsByTagName("span")[0].innerText;
-                if (text.includes("Дмитрий Поляков")) {
-                    elements[i].getElementsByTagName("span")[0].innerText = "👑 ДимДимыч ";
-                }
-                if (text.toLowerCase().includes("пб-20v") || text.toLowerCase().includes("пб-20в")) {
-                    elements[i].getElementsByTagName("span")[0].innerText = "☭ "+text.toLowerCase().replace("пб-20в_","").replace("пб-20v_","");
-                }
+                var text = elements[i].getElementsByTagName("span")[0].innerText; 
 
                 var regex = /(\S*)-(\S*)_(\S*) (\S*)/gi;
                 match = regex.exec(text);
@@ -69,7 +63,7 @@
             style.innerText = style.innerText + ".simple_record_button {transition:0.3s;width: 40px;height: 40px;background: #fff;border-radius: 100%;border: 12px solid #f00;}.simple_record_button:hover{transition:0.3s;border: 6px solid #f00;}";
             style.innerText = style.innerText + ".simple_stop_record_button {transition:0.3s;width: 40px;height: 40px;background: #fff;border-radius: 4px;border: 12px solid #f00;}.simple_stop_record_button:hover{transition:0.3s;border: 6px solid #f00;}";
             style.innerText = style.innerText + ".simple_download_record_button {padding-top: 5px;transition:0.3s;width: 40px;height: 40px;background: rgba(160,30,30);border-radius: 4px;border-bottom-left-radius: 50%;border-bottom-right-radius: 50%;align-items: center;text-align: center;text-align-last: center;color: #fff;}.simple_download_record_button:hover{padding-top: 8px;transition:0.3s;background:rgba(141,49,49);}";
-            style.innerText = style.innerText + "span{text-transform: capitalize;}";
+            style.innerText = style.innerText + "span{text-transform: capitalize;}a{text-decoration:none;}";
             
             head.appendChild(style);
         }
