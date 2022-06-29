@@ -1,5 +1,5 @@
 
-        console.log("version: 0.0.16");
+        console.log("version: 0.0.17");
         var loaded = false;
         scan_users();
         setInterval(function () {
@@ -7,7 +7,7 @@
         }, 10000);
         setTimeout(function () {
                 var timeout = setInterval(function(){
-                if(document.getElementById("")!=null){
+                if(document.getElementByClassName("right--DUFDc")[0]!=null){
                  clearInterval(timeout);
                  loadscript();
                 }
