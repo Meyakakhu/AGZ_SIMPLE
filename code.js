@@ -1,4 +1,4 @@
-        var version = "0.0.32_3";
+        var version = "0.0.34_1";
 
         
         console.log("version: "+version);
@@ -100,6 +100,10 @@
             style.innerText = style.innerText + ".simple_download_record_button {padding-top: 5px;transition:0.3s;width: 40px;height: 40px;background: rgba(160,30,30);border-radius: 4px;border-bottom-left-radius: 50%;border-bottom-right-radius: 50%;align-items: center;text-align: center;text-align-last: center;color: #fff;}.simple_download_record_button:hover{padding-top: 8px;transition:0.3s;background:rgba(141,49,49);}";
             style.innerText = style.innerText + "span{text-transform: capitalize;}a{text-decoration:none;}";
             style.innerText = style.innerText + ".group_name{padding:5px; color: #ddd;}";
+            style.innerText = style.innerText + ".group_name{padding:5px; color: #ddd;}";
+            style.innerText = style.innerText + ".emoji_list{padding:20px;background: rgba(0,0,0,0.3);width: 400px;margin: 40px;border-radius: 10px;text-align: center;font-family: 'Consolas';font-size: 20px;height: 200px;overflow: auto;}";
+            style.innerText = style.innerText + ".emoji{font-size: 28px;padding:3px;}div#emojies {display: flex;flex-wrap: wrap;justify-content: space-between;align-content: space-around;align-items: center;}";
+            
             
             head.appendChild(style);
         }
@@ -184,6 +188,114 @@
          buttons_panel.appendChild(record);
          buttons_panel.appendChild(stop_record);   
          buttons_panel.appendChild(url_down);
+        }
+
+        function create_emojies(){
+            var buttons = document.getElementsByClassName("wrapper--ZhSWmd")[0];
+            var emoji_button = document.createElement("div");
+            emoji_button.innerText = "o_o";
+            emoji_button.id = "emoji_button_open";
+            emoji_button.classList.add("emoji_button_open");
+            buttons.appendChild(emoji_button);
+
+            var emoji_panel = document.createElement("div");
+            emoji_panel.classList.add("emoji_list");
+            emoji_panel.innerHTML = "Выберите ниже <div id=\"emojies_full_list\"></div>";
+            buttons.appendChild(emoji_panel);
+            load_emojies();
+        }
+
+        async function load_emojies(){
+            var id = document.getElementById("emojies_full_list");
+
+            for(var i=128511;i<=128591;i++){
+              var emoji = document.createElement("div");
+              emoji.classList.add("emoji")
+              emoji.innerHTML = "&#"+i+";";
+              id.appendChild(emoji);
+            }
+            for(var i=127744;i<=127776;i++){
+              var emoji = document.createElement("div");
+              emoji.classList.add("emoji")
+              emoji.innerHTML = "&#"+i+";";
+              id.appendChild(emoji);
+            }
+            for(var i=127789;i<=127891;i++){
+              var emoji = document.createElement("div");
+              emoji.classList.add("emoji")
+              emoji.innerHTML = "&#"+i+";";
+              id.appendChild(emoji);
+            }
+            for(var i=127903;i<=127955;i++){
+              var emoji = document.createElement("div");
+              emoji.classList.add("emoji")
+              emoji.innerHTML = "&#"+i+";";
+              id.appendChild(emoji);
+            }
+            for(var i=127968;i<=127984;i++){
+              var emoji = document.createElement("div");
+              emoji.classList.add("emoji")
+              emoji.innerHTML = "&#"+i+";";
+              id.appendChild(emoji);
+            }
+            for(var i=128000;i<=128317;i++){
+              var emoji = document.createElement("div");
+              emoji.classList.add("emoji")
+              emoji.innerHTML = "&#"+i+";";
+              id.appendChild(emoji);
+            }
+            for(var i=128331;i<=128359;i++){
+              if(i!=128335){
+              var emoji = document.createElement("div");
+              emoji.classList.add("emoji")
+              emoji.innerHTML = "&#"+i+";";
+              id.appendChild(emoji);
+              }
+            }
+            for(var i=128507;i<=128510;i++){
+              var emoji = document.createElement("div");
+              emoji.classList.add("emoji")
+              emoji.innerHTML = "&#"+i+";";
+              id.appendChild(emoji);
+            }
+            for(var i=128640;i<=128709;i++){
+              var emoji = document.createElement("div");
+              emoji.classList.add("emoji")
+              emoji.innerHTML = "&#"+i+";";
+              id.appendChild(emoji);
+            }
+            for(var i=128756;i<=128764;i++){
+              var emoji = document.createElement("div");
+              emoji.classList.add("emoji")
+              emoji.innerHTML = "&#"+i+";";
+              id.appendChild(emoji);
+            }
+            for(var i=129292;i<=129535;i++){
+              if(i!=129350){
+              var emoji = document.createElement("div");
+              emoji.classList.add("emoji")
+              emoji.innerHTML = "&#"+i+";";
+              id.appendChild(emoji);
+              }
+            }
+            for(var i=129648;i<=129670;i++){
+              if((i<129653 || i>129655) && (i<129661 || i>129663)){
+              var emoji = document.createElement("div");
+              emoji.classList.add("emoji")
+              emoji.innerHTML = "&#"+i+";";
+              id.appendChild(emoji);
+              }
+            }
+            for(var i=129680;i<=129782;i++){
+              if((i<129709 || i>129711) && (i<129723 || i>129727) && (i<129734 || i>129743) && (i<129754 || i>129759) && (i<129768 || i>129775)){
+              var emoji = document.createElement("div");
+              emoji.classList.add("emoji")
+              emoji.innerHTML = "&#"+i+";";
+              id.appendChild(emoji);
+              }
+            }
+            
+                                
         }
 
         async function startRecording() {
