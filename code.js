@@ -1,4 +1,4 @@
-        var version = "0.0.29_10";
+        var version = "0.0.29_12";
 
         
         console.log("version: "+version);
@@ -33,7 +33,6 @@
                 
             chat = document.getElementsByClassName("ReactVirtualized__Grid__innerScrollContainer")[1];
             chat.style = "width: auto;  max-width: 362px;  overflow: hidden; pointer-events: none; position: relative;";
-            generate_message("Скрипт версии <b>"+version+"</b>. Был успешно загружен.");
         }
 
         function scan_users() {
@@ -52,7 +51,7 @@
                     elements[i].getElementsByTagName("span")[0].innerText = "🦠 Илюшка ";
                 }
                 if (text.toLowerCase().includes("пб-20v") || text.toLowerCase().includes("пб-20в")) {
-                    elements[i].getElementsByTagName("span")[0].innerText = "☭ "+text.toLowerCase().replace("пб-20в","").replace("пб-20v","");
+                    elements[i].getElementsByTagName("span")[0].innerText = "☭ "+text.toLowerCase().replace("пб-20в_","").replace("пб-20v_","");
                 }
 
                 var regex = /(\S*)-(\S*)_(\S*) (\S*)/gi;
@@ -73,7 +72,7 @@
             style.innerText = style.innerText + ".simple_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 100%;border: 12px solid #fff;}.simple_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
             style.innerText = style.innerText + ".simple_stop_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 4px;border: 12px solid #fff;}.simple_stop_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
             style.innerText = style.innerText + ".simple_download_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 4px;border: 12px solid #fff;}.simple_download_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
-            style.innerText = style.innerText + "span{position:relative !important;top: auto !important;}";
+            style.innerText = style.innerText + "span{position:relative !important;top: auto !important;text-transform: capitalize;}";
             
             head.appendChild(style);
         }
@@ -187,13 +186,4 @@
         };
 
         recorder.start();
-        }
-
-        
-        function generate_message(text){
-                
-                var message = document.createElement("span");
-                message.stlye = "height: 65px; left: 0px; position: absolute; top: 65px; width: 100%;";
-                message.innerHTML = '<div class="item--ZfUxvS"><div class="item--ZfUxvS"><div class="wrapper--1nuR8g"><div class="avatarWrapper--22Egh5"><div aria-hidden="true" data-test="userAvatar" class="avatar--Z2lyL8K avatar--Z20xpIn" style="border-radius: 10%;background-color: rgb(145, 49, 49); color: rgb(255,255,255);"><div class=""></div><div class="content--6H8et">sys</div></div></div><div class="content--BYIui"><div class="meta--ZfU5fg"><div class="name--ZfTXko"><span>Система</span></div><time class="time--ZfT9e6"></time></div><div class="messages--ZTkmon"><p class="message--CeFIW" data-test="chatUserMessageText">'+text+'</p></div></div></div></div></div>';
-                chat.appendChild(message);
         }
