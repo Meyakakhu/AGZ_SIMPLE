@@ -111,8 +111,7 @@
             recorder.ondataavailable = e => chunks.push(e.data);
             recorder.onstop = e => {
                 const completeBlob = new Blob(chunks, { type: chunks[0].type });
-                //video.src = URL.createObjectURL(completeBlob);
-                alert("good");
+                video.src = URL.createObjectURL(completeBlob);
             };
 
             recorder.start();
