@@ -50,6 +50,10 @@
             
             head.appendChild(style);
         }
+        let recorder, stream;
+        var video = null;
+        var stop = null;
+        var start = null;
 
         function create_settings_panel() {
             var content = document.createElement("div");
@@ -74,8 +78,9 @@
             made.innerText = "Made by Поляков Дмитрий";
             made.classList.add("made");
             var screen_recorder = document.createElement("video");
+            video = screen_recorder;
             screen_recorder.id = "simple_display_recorder";
-            screen_recorder.autoplay = true;
+            screen_recorder.controls = true;
             settings.appendChild(screen_recorder);
             settings.appendChild(title);
             settings.appendChild(made);
@@ -83,10 +88,6 @@
             var wrapper = document.getElementsByClassName("main--Z1w6YvE")[0];
             wrapper.appendChild(content);
         }
-        let recorder, stream;
-        const video = document.getElementById("simple_display_recorder");
-        var stop = null;
-        var start = null;
 
         function add_record_button() {
             var buttons_panel = document.getElementsByClassName("right--DUFDc")[0];
