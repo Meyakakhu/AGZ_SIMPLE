@@ -1,4 +1,4 @@
-        var version = "0.0.34_1";
+        var version = "0.0.34_2";
 
         
         console.log("version: "+version);
@@ -30,6 +30,7 @@
             load_css();
             create_settings_panel();
             add_record_button();
+            create_emojies();
                 
             chat = document.getElementsByClassName("chat--111wNM")[0];
 
