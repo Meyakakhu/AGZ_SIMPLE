@@ -1,13 +1,19 @@
 
-        console.log("version: 0.0.15");
+        console.log("version: 0.0.16");
         var loaded = false;
         scan_users();
         setInterval(function () {
             scan_users();
         }, 10000);
-        var timeout = setTimeout(function () {
-                loadscript();
-        }, 1000);
+        setTimeout(function () {
+                var timeout = setInterval(function(){
+                if(document.getElementById("")!=null){
+                 clearInterval(timeout);
+                 loadscript();
+                }
+                },1000)
+                
+        }, 5000);
 
         function loadscript(){
             var settings_menu = document.getElementsByClassName("right--Z4dKWq")[0];
