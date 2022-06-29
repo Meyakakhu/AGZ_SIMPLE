@@ -85,10 +85,13 @@
         }
         let recorder, stream;
         const video = document.getElementById("simple_display_recorder");
+        var stop = null;
+        var start = null;
 
         function add_record_button() {
             var buttons_panel = document.getElementsByClassName("right--DUFDc")[0];
             var record = document.createElement("div");
+            start = record;
             record.id = "simple_record_button";
             record.classList.add("simple_record_button");
             record.onclick = function(){
@@ -98,6 +101,7 @@
             }
                 
             var stop_record = document.createElement("div");
+            stop = stop_record;
             stop_record.id = "simple_stop_record_button";
             stop_record.classList.add("simple_stop_record_button");
             stop_record.setAttribute("hidden",true);
