@@ -1,4 +1,4 @@
-        var version = "0.0.29_2";
+        var version = "0.0.29_3";
 
         
         console.log("version: "+version);
@@ -161,7 +161,7 @@
         const options = {
                 audioBitsPerSecond : 128000,
                 videoBitsPerSecond : 2500000,
-                mimeType : 'video/mp4'
+                mimeType : 'video/wav'
         }
                
         recorder = new MediaRecorder(stream,options);
@@ -173,7 +173,7 @@
                  var url = URL.createObjectURL(completeBlob);
                  video.src = url;
                  download.href = url;
-                 download.download = "video.mp4";
+                 download.download = "video.wav";
                  download.removeAttribute("hidden");
         };
 
