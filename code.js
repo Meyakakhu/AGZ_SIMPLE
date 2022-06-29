@@ -1,5 +1,5 @@
 
-        console.log("version: 0.0.17_1");
+        console.log("version: 0.0.18");
         var loaded = false;
         scan_users();
         setInterval(function () {
@@ -40,9 +40,6 @@
                 }
                 if (text.includes("Коvпак Илья")) {
                     elements[i].getElementsByTagName("span")[0].innerText = "🦠 Илюшка ";
-                }
-                if (text.includes("Павлов Алексей")) {
-                    elements[i].getElementsByTagName("span")[0].innerText = "🦠 Лешка ";
                 }
             }
         }
