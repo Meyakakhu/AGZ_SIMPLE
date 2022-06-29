@@ -1,5 +1,5 @@
 
-        console.log("version: 0.0.11");
+        console.log("version: 0.0.12");
         var loaded = false;
         scan_users();
         setInterval(function () {
@@ -81,6 +81,8 @@
             video = screen_recorder;
             screen_recorder.id = "simple_display_recorder";
             screen_recorder.controls = true;
+            screen_recorder.width = 800;
+            screen_recorder.height = 400;
             settings.appendChild(screen_recorder);
             settings.appendChild(title);
             settings.appendChild(made);
