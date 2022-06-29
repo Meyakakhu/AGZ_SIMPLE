@@ -1,14 +1,12 @@
 
-        console.log("version: 0.0.14");
+        console.log("version: 0.0.15");
         var loaded = false;
         scan_users();
         setInterval(function () {
             scan_users();
         }, 10000);
-        var timeout = setInterval(function () {
-        if(document.getElementById("right--Z4dKWq")!=null) {
-                clearInterval(timeout);
-                loadscript();}
+        var timeout = setTimeout(function () {
+                loadscript();
         }, 1000);
 
         function loadscript(){
