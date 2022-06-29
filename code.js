@@ -1,23 +1,40 @@
+let recorder, stream;
 const chatpan = document.getElementById("chatPanel");
-const startbtn = document.createElement("button");
-startbtn.id="start_rec";
-startbtn.value = "Записывать";
-chatpan.appendChild(startbtn);
-const stopbtn = document.createElement("button");
-stopbtn.id="stop_rec";
-stopbtn.value = "Не записывать";
-stopbtn.disabled = true;
-chatpan.appendChild(stopbtn);
 const video_rec = document.createElement("video");
 video_rec.id="video_rec";
 video_rec.controls = true;
 chatpan.appendChild(video_rec);
+const startbtn = document.createElement("button");
+startbtn.id="start_rec";
+startbtn.innerText = "Записывать";
+startbtn.onclick = function(){
+  start.setAttribute("disabled", true);
+  stop.removeAttribute("disabled");
+
+  startRecording();
+}
+
+const video = video_rec;
+
+
+chatpan.appendChild(startbtn);
+const stopbtn = document.createElement("button");
+stopbtn.id="stop_rec";
+stopbtn.innerText = "Не записывать";
+stopbtn.disabled = true;
+stopbtn.onclick = function(){
+  stop.setAttribute("disabled", true);
+  start.removeAttribute("disabled");
+
+  recorder.stop();
+  stream.getVideoTracks()[0].stop();
+}
+chatpan.appendChild(stopbtn);
+
 
 
 const start = document.getElementById("start_rec");
 const stop = document.getElementById("stop_rec");
-const video = document.getElemetnById("video_rec");
-let recorder, stream;
 
 async function startRecording() {
   stream = await navigator.mediaDevices.getDisplayMedia({
@@ -35,18 +52,3 @@ async function startRecording() {
 
   recorder.start();
 }
-
-start.addEventListener("click", () => {
-  start.setAttribute("disabled", true);
-  stop.removeAttribute("disabled");
-
-  startRecording();
-});
-
-stop.addEventListener("click", () => {
-  stop.setAttribute("disabled", true);
-  start.removeAttribute("disabled");
-
-  recorder.stop();
-  stream.getVideoTracks()[0].stop();
-});
