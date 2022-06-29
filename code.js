@@ -1,4 +1,4 @@
-        var version = "0.0.29_1";
+        var version = "0.0.29_2";
 
         
         console.log("version: "+version);
@@ -153,7 +153,7 @@
         }
 
         async function startRecording() {
-                download.setAttrubute("hidden",true);
+                if(download!=null) {download.setAttribute("hidden",true)};
                 stream = await navigator.mediaDevices.getDisplayMedia({
                         audio:true,
                         video: { mediaSource: "screen" }
