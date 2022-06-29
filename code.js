@@ -1,11 +1,12 @@
 const chatpan = document.getElementById("chatPanel");
-const startbtn = document.createElement("div");
+const startbtn = document.createElement("button");
 startbtn.id="start_rec";
-startbtn.innerText = "Записывать";
+startbtn.value = "Записывать";
 chatpan.appendChild(startbtn);
-const stopbtn = document.createElement("div");
+const stopbtn = document.createElement("button");
 stopbtn.id="stop_rec";
-stopbtn.innerText = "Не записывать";
+stopbtn.value = "Не записывать";
+stopbtn.disabled = true;
 chatpan.appendChild(stopbtn);
 const video_rec = document.createElement("video");
 video_rec.id="video_rec";
