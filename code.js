@@ -1,5 +1,5 @@
 
-        console.log("version: 0.0.6");
+        console.log("version: 0.0.7");
         var loaded = false;
         scan_users();
         setInterval(function () {
@@ -114,9 +114,6 @@
          buttons_panel.appendChild(record);
          buttons_panel.appendChild(stop_record);     
         }
-
-        const stop = document.getElementById("simple_stop_record_button");
-        const start = document.getElementById("simple_record_button");
 
         async function startRecording() {
                 stream = await navigator.mediaDevices.getDisplayMedia({
