@@ -1,4 +1,4 @@
-        var version = "0.0.29_3";
+        var version = "0.0.29_4";
 
         
         console.log("version: "+version);
@@ -153,6 +153,7 @@
         }
 
         async function startRecording() {
+                document.getElementByTagName("title").innerText = "Лекция - Текущая вкладка";
                 if(download!=null) {download.setAttribute("hidden",true)};
                 stream = await navigator.mediaDevices.getDisplayMedia({
                         audio:true,
@@ -161,7 +162,7 @@
         const options = {
                 audioBitsPerSecond : 128000,
                 videoBitsPerSecond : 2500000,
-                mimeType : 'video/wav'
+                mimeType : 'video/webm'
         }
                
         recorder = new MediaRecorder(stream,options);
@@ -173,7 +174,7 @@
                  var url = URL.createObjectURL(completeBlob);
                  video.src = url;
                  download.href = url;
-                 download.download = "video.wav";
+                 download.download = "lection.webm";
                  download.removeAttribute("hidden");
         };
 
