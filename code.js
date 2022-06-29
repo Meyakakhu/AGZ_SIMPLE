@@ -60,7 +60,7 @@
                     var count = 0;
                     for(var j = 0; j<groups.length; j++){
                         if(groups[j]==group){
-                            if(counts.length>=j) {counts[j] = counts[j]+1;console.log("count: "+counts[j]);} else {counts[j] = 1;console.log("count1: "+counts[j]);}
+                            if(counts[j]!=null) {counts[j] = counts[j]+1;console.log("count: "+counts[j]);} else {counts[j] = 1;console.log("count1: "+counts[j]);}
                             count = counts[j];
                             console.log("count2:"+count);
                         }
