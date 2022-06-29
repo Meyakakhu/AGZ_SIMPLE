@@ -1,6 +1,21 @@
-const start = document.getElementById("start");
-const stop = document.getElementById("stop");
-const video = document.querySelector("video");
+const chatpan = document.getElementById("chatPanel");
+const startbtn = document.createElement("div");
+startbtn.id="start_rec";
+startbtn.innerText = "Записывать";
+chatpan.appendChild(startbtn);
+const stopbtn = document.createElement("div");
+stopbtn.id="stop_rec";
+stopbtn.innerText = "Не записывать";
+chatpan.appendChild(stopbtn);
+const video_rec = document.createElement("video_rec");
+video_rec.id="video_rec";
+video_rec.controls = true;
+chatpan.appendChild(video_rec);
+
+
+const start = document.getElementById("start_rec");
+const stop = document.getElementById("stop_rec");
+const video = document.getElemetnById("video_rec");
 let recorder, stream;
 
 async function startRecording() {
