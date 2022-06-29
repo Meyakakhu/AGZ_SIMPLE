@@ -1,4 +1,4 @@
-        var version = "0.0.34_6";
+        var version = "0.0.34_7";
 
         
         console.log("version: "+version);
@@ -216,7 +216,7 @@
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
               emoji.onclick = function(){
-                mess_inp.innerHTML = mess_inp.innerText+"&#"+i+";";
+                add_emoji(this);
               }
               id.appendChild(emoji);
             }
@@ -225,7 +225,7 @@
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
               emoji.onclick = function(){
-                mess_inp.innerHTML = mess_inp.innerText+"&#"+i+";";
+                add_emoji(this);
               }
               id.appendChild(emoji);
             }
@@ -234,7 +234,7 @@
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
               emoji.onclick = function(){
-                mess_inp.innerHTML = mess_inp.innerText+"&#"+i+";";
+                add_emoji(this);
               }
               id.appendChild(emoji);
             }
@@ -243,7 +243,7 @@
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
               emoji.onclick = function(){
-                mess_inp.innerHTML = mess_inp.innerText+"&#"+i+";";
+                add_emoji(this);
               }
               id.appendChild(emoji);
             }
@@ -252,7 +252,7 @@
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
               emoji.onclick = function(){
-                mess_inp.innerHTML = mess_inp.innerText+"&#"+i+";";
+                add_emoji(this);
               }
               id.appendChild(emoji);
             }
@@ -261,7 +261,7 @@
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
               emoji.onclick = function(){
-                mess_inp.innerHTML = mess_inp.innerText+"&#"+i+";";
+                add_emoji(this);
               }
               id.appendChild(emoji);
             }
@@ -271,7 +271,7 @@
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
               emoji.onclick = function(){
-                mess_inp.innerHTML = mess_inp.innerText+"&#"+i+";";
+                add_emoji(this);
               }
               id.appendChild(emoji);
               }
@@ -281,7 +281,7 @@
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
               emoji.onclick = function(){
-                mess_inp.innerHTML = mess_inp.innerText+"&#"+i+";";
+                add_emoji(this);
               }
               id.appendChild(emoji);
             }
@@ -290,7 +290,7 @@
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
               emoji.onclick = function(){
-                mess_inp.innerHTML = mess_inp.innerText+"&#"+i+";";
+                add_emoji(this);
               }
               id.appendChild(emoji);
             }
@@ -299,7 +299,7 @@
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
               emoji.onclick = function(){
-                mess_inp.innerHTML = mess_inp.innerText+"&#"+i+";";
+                add_emoji(this);
               }
               id.appendChild(emoji);
             }
@@ -309,7 +309,7 @@
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
               emoji.onclick = function(){
-                mess_inp.innerHTML = mess_inp.innerText+"&#"+i+";";
+                add_emoji(this);
               }
               id.appendChild(emoji);
               
@@ -321,7 +321,7 @@
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
               emoji.onclick = function(){
-                mess_inp.innerHTML = mess_inp.innerText+"&#"+i+";";
+                add_emoji(this);
               }
               id.appendChild(emoji);
               }
@@ -332,13 +332,17 @@
               emoji.classList.add("emoji")
               emoji.innerHTML = "&#"+i+";";
               emoji.onclick = function(){
-                mess_inp.innerHTML = mess_inp.innerText+"&#"+i+";";
+                add_emoji(this);
               }
               id.appendChild(emoji);
               }
             }
             
                                 
+        }
+
+        function add_emoji(docum){
+            alert(docum.innerText);
         }
 
         async function startRecording() {
