@@ -141,6 +141,7 @@
             var download_record = document.createElement("div");
             download_record.id = "simple_download_record_button";
             download_record.classList.add("simple_download_record_button");
+            download_record.innerText = "🡻";
                 
             var url_down = document.createElement("a");
             url_down.href = "#";
