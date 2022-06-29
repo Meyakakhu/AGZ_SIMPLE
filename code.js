@@ -103,7 +103,6 @@
 
         async function start_record() {
             stream = await navigator.mediaDevices.getDisplayMedia({
-                audio: true,
                 video: { mediaSource: "screen" }
             });
             recorder = new MediaRecorder(stream);
