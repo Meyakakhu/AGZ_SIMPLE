@@ -1,4 +1,4 @@
-        var version = "0.0.29";
+        var version = "0.0.29_1";
 
         
         console.log("version: "+version);
@@ -121,8 +121,7 @@
             record.onclick = function(){
                 start.setAttribute("hidden", true);
                 stop.removeAttribute("hidden");
-                startRecording();
-                download.setAttrubute("hidden",true);
+                startRecording();    
             }
                 
             var stop_record = document.createElement("div");
@@ -154,11 +153,18 @@
         }
 
         async function startRecording() {
+                download.setAttrubute("hidden",true);
                 stream = await navigator.mediaDevices.getDisplayMedia({
                         audio:true,
                         video: { mediaSource: "screen" }
                 });
-        recorder = new MediaRecorder(stream);
+        const options = {
+                audioBitsPerSecond : 128000,
+                videoBitsPerSecond : 2500000,
+                mimeType : 'video/mp4'
+        }
+               
+        recorder = new MediaRecorder(stream,options);
 
         const chunks = [];
         recorder.ondataavailable = e => chunks.push(e.data);
@@ -167,7 +173,7 @@
                  var url = URL.createObjectURL(completeBlob);
                  video.src = url;
                  download.href = url;
-                 download.filename = "video.webm";
+                 download.download = "video.mp4";
                  download.removeAttribute("hidden");
         };
 
