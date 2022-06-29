@@ -22,9 +22,6 @@ setInterval(function(){
     settings_menu.appendChild(simple_settings);
     load_css();
     create_settings_panel();
-    var trye = document.createElement("div");
-    trye.id = "test_code";
-    trye.innerText = "<script>alert(\"ok\");</script>";
     simple_settings.appendChild(trye);
     },1000);
 
