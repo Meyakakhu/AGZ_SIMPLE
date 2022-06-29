@@ -1,4 +1,4 @@
-        var version = "0.0.29_12";
+        var version = "0.0.29_13";
 
         
         console.log("version: "+version);
@@ -68,7 +68,7 @@
             style.innerText = style.innerText + ".made{position:absolute;bottom:20px;right:45px;color:#acb1b7;}";
             style.innerText = style.innerText + ".simple_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 100%;border: 12px solid #fff;}.simple_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
             style.innerText = style.innerText + ".simple_stop_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 4px;border: 12px solid #fff;}.simple_stop_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
-            style.innerText = style.innerText + ".simple_download_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 4px;border: 12px solid #fff;}.simple_download_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
+            style.innerText = style.innerText + ".simple_download_record_button {transition:0.3s;width: 40px;height: 40px;background: rgba(160,30,30);border-radius: 4px;border-bottom-left-radius: 50%;border-bottom-right-radius: 50%;align-items: center;text-align: center;text-align-last: center;color: #fff;}.simple_download_record_button:hover{transition:0.3s;background:rgba(141,49,49);}";
             style.innerText = style.innerText + "span{text-transform: capitalize;}";
             
             head.appendChild(style);
