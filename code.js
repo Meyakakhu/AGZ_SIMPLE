@@ -1,4 +1,4 @@
-        var version = "0.0.29_5";
+        var version = "0.0.29_6";
 
         
         console.log("version: "+version);
@@ -153,7 +153,7 @@
         }
 
         async function startRecording() {
-                document.getElementByTagName("title").innerText = "Лекция - Текущая вкладка";
+                document.getElementsByTagName("title")[0].innerText = "Лекция - Текущая вкладка";
                 if(download!=null) {download.setAttribute("hidden",true)};
                 stream = await navigator.mediaDevices.getDisplayMedia({
                         audio:true,
