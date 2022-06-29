@@ -1,4 +1,4 @@
-        var version = "0.0.32";
+        var version = "0.0.32_2";
 
         
         console.log("version: "+version);
@@ -31,8 +31,9 @@
             create_settings_panel();
             add_record_button();
                 
-            chat = document.getElementsByClassName("ReactVirtualized__Grid__innerScrollContainer")[1];
-            chat.style = "width: auto;  max-width: 362px;  overflow: hidden; pointer-events: none; position: relative;";
+            chat = document.getElementsByClassName("header--W8C2z")[0];
+
+            generate_message("Скрипт версии <b>"+version+"</b> был успешно загружен.");
         }
 
         function scan_users() {
@@ -98,6 +99,7 @@
             style.innerText = style.innerText + ".simple_stop_record_button {transition:0.3s;width: 40px;height: 40px;background: #fff;border-radius: 4px;border: 12px solid #f00;}.simple_stop_record_button:hover{transition:0.3s;border: 6px solid #f00;}";
             style.innerText = style.innerText + ".simple_download_record_button {padding-top: 5px;transition:0.3s;width: 40px;height: 40px;background: rgba(160,30,30);border-radius: 4px;border-bottom-left-radius: 50%;border-bottom-right-radius: 50%;align-items: center;text-align: center;text-align-last: center;color: #fff;}.simple_download_record_button:hover{padding-top: 8px;transition:0.3s;background:rgba(141,49,49);}";
             style.innerText = style.innerText + "span{text-transform: capitalize;}a{text-decoration:none;}";
+            style.innerText = style.innerText + ".group_name{padding:5px; color: #ddd;}";
             
             head.appendChild(style);
         }
@@ -213,3 +215,10 @@
 
         recorder.start();
         }
+
+        function generate_message(text){
+                
+            var message = document.createElement("div");
+            message.innerHTML = '<div class="item--ZfUxvS"><div class="item--ZfUxvS"><div class="wrapper--1nuR8g"><div class="avatarWrapper--22Egh5"><div aria-hidden="true" data-test="userAvatar" class="avatar--Z2lyL8K avatar--Z20xpIn" style="border-radius: 10%;background-color: rgb(145, 49, 49); color: rgb(255,255,255);"><div class=""></div><div class="content--6H8et">sys</div></div></div><div class="content--BYIui"><div class="meta--ZfU5fg"><div class="name--ZfTXko"><span>Система</span></div><time class="time--ZfT9e6"></time></div><div class="messages--ZTkmon"><p class="message--CeFIW" data-test="chatUserMessageText">'+text+'</p></div></div></div></div></div>';
+            chat.appendChild(message);
+    }
