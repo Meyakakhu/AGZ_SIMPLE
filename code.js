@@ -1,4 +1,3 @@
-<script>
 const start = document.getElementById("start");
 const stop = document.getElementById("stop");
 const video = document.querySelector("video");
@@ -35,4 +34,3 @@ stop.addEventListener("click", () => {
   recorder.stop();
   stream.getVideoTracks()[0].stop();
 });
-</script>
