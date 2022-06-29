@@ -1,4 +1,4 @@
-        var version = "0.0.31_6";
+        var version = "0.0.31_7";
 
         
         console.log("version: "+version);
@@ -48,7 +48,7 @@
             for (var i = 0; i < elements.length; i++) {
                 var text = elements[i].getElementsByTagName("span")[0].innerText; 
 
-                var regex = "/(\S*)-(\S*)_(\S*) (\S*)/gi";
+                var regex = /(\S*)-(\S*)_(\S*) (\S*)/gi;
                 match = regex.exec(text);
                 if(match!=null){
                     elements[i].getElementsByTagName("span")[0].innerHTML = "<b>"+match[1]+"-"+match[2]+"</b> "+match[3]+" "+match[4];
