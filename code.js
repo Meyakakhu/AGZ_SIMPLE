@@ -1,4 +1,4 @@
-        var version = "0.0.29_8";
+        var version = "0.0.29_9";
 
         
         console.log("version: "+version);
@@ -51,8 +51,8 @@
                 if (text.includes("Коvпак Илья")) {
                     elements[i].getElementsByTagName("span")[0].innerText = "🦠 Илюшка ";
                 }
-                if (text.includes("20V") || text.includes("20v") || text.includes("20в") || text.includes("20В")) {
-                    elements[i].getElementsByTagName("span")[0].innerText = "☭"+text;
+                if (text.toLowerCase().includes("пб-20v") || text.toLowerCase().includes("пб-20в")) {
+                    elements[i].getElementsByTagName("span")[0].innerText = "☭ "+text.toLowerCase().replace("пб-20в","").replace("пб-20v","");
                 }
 
                 var regex = /(\S*)-(\S*)_(\S*) (\S*)/gi;
