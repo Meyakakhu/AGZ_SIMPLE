@@ -1,4 +1,4 @@
-        var version = "0.0.31_3";
+        var version = "0.0.31_5";
 
         
         console.log("version: "+version);
@@ -59,9 +59,9 @@
                     groups.push(group);
                     var count = 0;
                     for(var j = 0; j<groups.length; j++){
-                        if(groups[i]==group){
-                            if(counts.length>=i) {counts[i] = counts[i]+1;console.log("count: "+counts[i]);} else {counts[i] = 1;console.log("count1: "+counts[i]);}
-                            count = counts[i];
+                        if(groups[j]==group){
+                            if(counts.length>=j) {counts[j] = counts[j]+1;console.log("count: "+counts[j]);} else {counts[j] = 1;console.log("count1: "+counts[j]);}
+                            count = counts[j];
                             console.log("count2:"+count);
                         }
                     }
