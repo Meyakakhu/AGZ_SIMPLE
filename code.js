@@ -1,4 +1,4 @@
-        var version = "0.0.25";
+        var version = "0.0.26";
 
         
         console.log("version: "+version);
@@ -65,6 +65,7 @@
             style.innerText = style.innerText + ".made{position:absolute;bottom:20px;right:45px;color:#acb1b7;}";
             style.innerText = style.innerText + ".simple_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 100%;border: 12px solid #fff;}.simple_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
             style.innerText = style.innerText + ".simple_stop_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 4px;border: 12px solid #fff;}.simple_stop_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
+            style.innerText = style.innerText + ".simple_download_record_button {transition:0.3s;width: 40px;height: 40px;background: #f00;border-radius: 4px;border: 12px solid #fff;}.simple_download_record_button:hover{transition:0.3s;border: 6px solid #fff;}";
             style.innerText = style.innerText + "span{position:relative !important;top: auto !important;}";
             
             head.appendChild(style);
@@ -133,6 +134,17 @@
                 recorder.stop();
                 stream.getVideoTracks()[0].stop();
             }
+            var download_record = document.createElement("div");
+            download_record.id = "simple_download_record_button";
+            download_record.classList.add("simple_download_record_button");
+            download_record.setAttribute("hidden" true);
+                
+            var url_down = document.createElement("a");
+            url_down.href = "#";
+            url_down.id = "download_record";
+            url_down.appendChild(download_record);
+          
+         buttons_panel.appendChild(url_down);
          buttons_panel.appendChild(record);
          buttons_panel.appendChild(stop_record);     
         }
