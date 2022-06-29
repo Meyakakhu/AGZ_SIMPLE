@@ -1,4 +1,4 @@
-        var version = "0.0.29_6";
+        var version = "0.0.29_7";
 
         
         console.log("version: "+version);
@@ -51,6 +51,28 @@
                 if (text.includes("Коvпак Илья")) {
                     elements[i].getElementsByTagName("span")[0].innerText = "🦠 Илюшка ";
                 }
+                if (text.includes("20V") || text.includes("20v") || text.includes("20в") || text.includes("20В")) {
+                    elements[i].getElementsByTagName("span")[0].innerText = "☭"+text;
+                }
+
+                var regex = /(\S*)-(\S*)_(\S*) (\S*)/gi;
+                match = regex.exec(text);
+                    
+                var gr_type = match[1];
+                var gr_name = match[2];
+                var st_snam = match[3];
+                var st_init = match[4];
+                
+                if(gr_name=="20v") {gr_name="20в";}
+                if(gr_name=="20V") {gr_name="20в";}
+                if(gr_name=="20а") {gr_name="20а";}
+                if(gr_name=="20А") {gr_name="20а";}
+                if(gr_name=="20В") {gr_name="20в";}
+                if(gr_name=="20б") {gr_name="20б";}
+                if(gr_name=="20Б") {gr_name="20б";}
+                if(gr_name=="20Г") {gr_name="20г";}
+                if(gr_name=="20г") {gr_name="20Г";}
+
             }
         }
         
