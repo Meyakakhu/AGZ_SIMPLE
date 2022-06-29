@@ -147,9 +147,9 @@
             url_down.setAttribute("hidden",true);
             download = url_down;
           
-         buttons_panel.appendChild(url_down);
          buttons_panel.appendChild(record);
-         buttons_panel.appendChild(stop_record);     
+         buttons_panel.appendChild(stop_record);   
+         buttons_panel.appendChild(url_down);
         }
 
         async function startRecording() {
