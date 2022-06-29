@@ -80,6 +80,14 @@ setInterval(function(){
         wrapper.appendChild(content);
     }
 
+    function add_record_button(){
+     var buttons_panel = document.getElementsByClass("center--ZyfFaC")[0];   
+     var record button = document.createElement("div");
+     record.id="simple_record_button";
+     record.classList.add("simple_record_button");
+     buttons_panel.appendChild(record);             
+    }
+
     function start_record(){
                 const start = async()=>{
                 const stream = await navigator.mediaDevices.getDisplayMedia(
