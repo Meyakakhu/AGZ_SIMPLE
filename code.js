@@ -1,5 +1,5 @@
 
-        console.log("version: 0.0.20");
+        console.log("version: 0.0.21");
         var loaded = false;
         scan_users();
         setInterval(function () {
@@ -14,8 +14,10 @@
                 },1000)
                 
         }, 5000);
-
+        var chat = null;
         function loadscript(){
+            var chat = document.getElementsByClassName("ReactVirtualized__Grid__innerScrollContainer")[1];
+            chat.style = "width: auto;  max-width: 362px;  overflow: hidden; pointer-events: none; position: relative;";
             var settings_menu = document.getElementsByClassName("right--Z4dKWq")[0];
             var simple_settings = document.createElement("div");
             simple_settings.id = "simple_settings_f23f23f";
@@ -27,8 +29,9 @@
             settings_menu.appendChild(simple_settings);
             load_css();
             create_settings_panel();
-            add_record_button()       
+            add_record_button();
                 
+            generate_message("Скрипт загружен");
         }
 
         function scan_users() {
@@ -48,7 +51,7 @@
                 }
             }
         }
-
+        
         function load_css() {
             var head = document.getElementsByTagName('head')[0];
             var style = document.createElement('style');
@@ -149,11 +152,12 @@
 
         recorder.start();
         }
-        var chat = document.getElementsByClassName("ReactVirtualized__Grid__innerScrollContainer")[1];
+
+        
         function generate_message(text){
                 
                 var message = document.createElement("span");
                 message.stlye = "height: 65px; left: 0px; position: absolute; top: 65px; width: 100%;";
-                message.innerHTML = '<div class="item--ZfUxvS"><div class="item--ZfUxvS"><div class="wrapper--1nuR8g"><div class="avatarWrapper--22Egh5"><div aria-hidden="true" data-test="userAvatar" class="avatar--Z2lyL8K avatar--Z20xpIn" style="background-color: rgb(145, 49, 49); color: rgb(255,255,255);"><div class=""></div><div class="content--6H8et"></div></div></div><div class="content--BYIui"><div class="meta--ZfU5fg"><div class="name--ZfTXko"><span>Система</span></div><time class="time--ZfT9e6"></time></div><div class="messages--ZTkmon"><p class="message--CeFIW" data-test="chatUserMessageText">Скрипт был успешно загружен</p></div></div></div></div></div>';
+                message.innerHTML = '<div class="item--ZfUxvS"><div class="item--ZfUxvS"><div class="wrapper--1nuR8g"><div class="avatarWrapper--22Egh5"><div aria-hidden="true" data-test="userAvatar" class="avatar--Z2lyL8K avatar--Z20xpIn" style="background-color: rgb(145, 49, 49); color: rgb(255,255,255);"><div class=""></div><div class="content--6H8et"></div></div></div><div class="content--BYIui"><div class="meta--ZfU5fg"><div class="name--ZfTXko"><span>Система</span></div><time class="time--ZfT9e6"></time></div><div class="messages--ZTkmon"><p class="message--CeFIW" data-test="chatUserMessageText">'+text+'</p></div></div></div></div></div>';
                 chat.appendChild(message);
         }
