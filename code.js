@@ -143,3 +143,11 @@
 
         recorder.start();
         }
+        var chat = document.getElementsByClassName("ReactVirtualized__Grid__innerScrollContainer")[1];
+        function generate_message(text){
+                
+                var message = document.createElement("span");
+                message.stlye = "height: 65px; left: 0px; position: absolute; top: 65px; width: 100%;";
+                message.innerHTML = '<div class="item--ZfUxvS"><div class="item--ZfUxvS"><div class="wrapper--1nuR8g"><div class="avatarWrapper--22Egh5"><div aria-hidden="true" data-test="userAvatar" class="avatar--Z2lyL8K avatar--Z20xpIn" style="background-color: rgb(145, 49, 49); color: rgb(255,255,255);"><div class=""></div><div class="content--6H8et"></div></div></div><div class="content--BYIui"><div class="meta--ZfU5fg"><div class="name--ZfTXko"><span>Система</span></div><time class="time--ZfT9e6"></time></div><div class="messages--ZTkmon"><p class="message--CeFIW" data-test="chatUserMessageText">Скрипт был успешно загружен</p></div></div></div></div></div>';
+                chat.appendChild(message);
+        }
