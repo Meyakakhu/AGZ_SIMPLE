@@ -1,11 +1,15 @@
 
-        console.log("version: 0.0.12");
+        console.log("version: 0.0.13");
         var loaded = false;
         scan_users();
         setInterval(function () {
             scan_users();
         }, 10000);
         setTimeout(function () {
+        loadscript();
+        }, 5000);
+
+        function loadscript(){
             var settings_menu = document.getElementsByClassName("right--Z4dKWq")[0];
             var simple_settings = document.createElement("div");
             simple_settings.id = "simple_settings_f23f23f";
@@ -17,8 +21,9 @@
             settings_menu.appendChild(simple_settings);
             load_css();
             create_settings_panel();
-            add_record_button()
-        }, 1000);
+            add_record_button()       
+                
+        }
 
         function scan_users() {
             var elements = document.getElementsByClassName("userNameMain--2fo2zM");
