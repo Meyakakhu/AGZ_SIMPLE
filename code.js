@@ -1,4 +1,4 @@
-        var version = "0.0.31_2";
+        var version = "0.0.31_3";
 
         
         console.log("version: "+version);
@@ -35,9 +35,9 @@
             chat.style = "width: auto;  max-width: 362px;  overflow: hidden; pointer-events: none; position: relative;";
         }
 
-        var groups = [];
-        var counts = [];
         function scan_users() {
+            var groups = [];
+            var counts = [];
             if(document.getElementById("currentSlideText")!=null){
              element = document.getElementById("currentSlideText");
              element.parentNode.removeChild(element);
