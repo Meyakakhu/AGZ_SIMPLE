@@ -82,38 +82,46 @@
             wrapper.appendChild(content);
         }
         let recorder, stream;
+        const video = document.getElementById("simple_display_recorder");
+
         function add_record_button() {
             var buttons_panel = document.getElementsByClassName("right--DUFDc")[0];
             var record = document.createElement("div");
             record.id = "simple_record_button";
             record.classList.add("simple_record_button");
-            record.onclick = function () {start_record();}
+            record.onclick = function(){
+                start.setAttribute("disabled", true);
+                stop.removeAttribute("hidden");
+                startRecording();
+            }
+                
             var stop_record = document.createElement("div");
-            stop_record.id = "simple_record_button";
-            stop_record.classList.add("simple_record_button");
-            stop_record.onclick = function () {stop_record();}
-            buttons_panel.appendChild(record);
-            buttons_panel.appendChild(stop_record);
+            stop_record.id = "simple_stop_record_button";
+            stop_record.classList.add("simple_stop_record_button");
+            stop_record.onclick = function () {
+                stop.setAttribute("disabled", true);
+                start.removeAttribute("disabled");
+                recorder.stop();
+                stream.getVideoTracks()[0].stop();
+            }
+         buttons_panel.appendChild(record);
+         buttons_panel.appendChild(stop_record);     
         }
 
-        const video = document.getElementById("simple_display_recorder");
 
-        function stop_record(){
-         recorder.stop();
-        }
+        async function startRecording() {
+                stream = await navigator.mediaDevices.getDisplayMedia({
+                        audio:true,
+                        video: { mediaSource: "screen" }
+                });
+        recorder = new MediaRecorder(stream);
 
-        async function start_record() {
-            stream = await navigator.mediaDevices.getDisplayMedia({
-                video: { mediaSource: "screen" }
-            });
-            recorder = new MediaRecorder(stream);
+        const chunks = [];
+        recorder.ondataavailable = e => chunks.push(e.data);
+        recorder.onstop = e => {
+                 const completeBlob = new Blob(chunks, { type: chunks[0].type });
+                 video.src = URL.createObjectURL(completeBlob);
+        };
 
-            const chunks = [];
-            recorder.ondataavailable = e => chunks.push(e.data);
-            recorder.onstop = e => {
-                const completeBlob = new Blob(chunks, { type: chunks[0].type });
-                video.src = URL.createObjectURL(completeBlob);
-            };
-
-            recorder.start();
+        recorder.start();
         }
