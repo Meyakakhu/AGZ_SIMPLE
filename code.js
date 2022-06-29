@@ -6,13 +6,13 @@
             scan_users();
         }, 10000);
         var timeout = setInterval(function () {
-        if(document.getElementById("right--Z4dKWq")!=null) {
+        if(document.getElementById("right--DUFDc")!=null) {
                 clearInterval(timeout);
                 loadscript();}
         }, 1000);
 
         function loadscript(){
-            var settings_menu = document.getElementsByClassName("right--Z4dKWq")[0];
+            var settings_menu = document.getElementsByClassName("right--DUFDc")[0];
             var simple_settings = document.createElement("div");
             simple_settings.id = "simple_settings_f23f23f";
             simple_settings.innerText = "⚙️";
