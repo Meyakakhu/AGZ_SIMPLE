@@ -1,4 +1,4 @@
-        var version = "0.0.34_2";
+        var version = "0.0.34_3";
 
         
         console.log("version: "+version);
@@ -102,8 +102,8 @@
             style.innerText = style.innerText + "span{text-transform: capitalize;}a{text-decoration:none;}";
             style.innerText = style.innerText + ".group_name{padding:5px; color: #ddd;}";
             style.innerText = style.innerText + ".group_name{padding:5px; color: #ddd;}";
-            style.innerText = style.innerText + ".emoji_list{padding:20px;background: rgba(0,0,0,0.3);width: 400px;margin: 40px;border-radius: 10px;text-align: center;font-family: 'Consolas';font-size: 20px;height: 200px;overflow: auto;}";
-            style.innerText = style.innerText + ".emoji{font-size: 28px;padding:3px;}div#emojies {display: flex;flex-wrap: wrap;justify-content: space-between;align-content: space-around;align-items: center;}";
+            style.innerText = style.innerText + ".emoji_list{padding:20px;background: rgba(0,0,0,0.3);width: 400px;margin: 40px;border-radius: 10px;text-align: center;font-family: 'Consolas';font-size: 20px;height: 200px;overflow: auto;position:absolute;top:-250px;}";
+            style.innerText = style.innerText + ".emoji{font-size: 15px;padding:3px;}div#emojies_full_list {display: flex;flex-wrap: wrap;justify-content: space-between;align-content: space-around;align-items: center;}";
             
             
             head.appendChild(style);
