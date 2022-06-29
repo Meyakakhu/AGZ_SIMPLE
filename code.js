@@ -8,6 +8,9 @@ setInterval(function(){
             if(text.includes("Коvпак Илья")){
              elements[i].getElementsByTagName("span")[0].innerText = "🦠 Илюшка ";
             }
+            if(text.includes("Павлов Алексей")){
+             elements[i].getElementsByTagName("span")[0].innerText = "🦠 Лешка ";
+            }
         }
     },10000);
     setTimeout(function(){
