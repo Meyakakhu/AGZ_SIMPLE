@@ -1,4 +1,4 @@
-        var version = "0.0.24";
+        var version = "0.0.25";
 
         
         console.log("version: "+version);
