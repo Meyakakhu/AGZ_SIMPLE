@@ -1,5 +1,5 @@
 
-        console.log("version: 0.0.7");
+        console.log("version: 0.0.8");
         var loaded = false;
         scan_users();
         setInterval(function () {
@@ -95,8 +95,8 @@
             record.id = "simple_record_button";
             record.classList.add("simple_record_button");
             record.onclick = function(){
-                document.getElementById("simple_record_button").setAttribute("disabled", true);
-                document.getElementById("simple_stop_record_button").removeAttribute("hidden");
+                start.setAttribute("hidden", true);
+                stop.removeAttribute("hidden");
                 startRecording();
             }
                 
@@ -106,8 +106,8 @@
             stop_record.classList.add("simple_stop_record_button");
             stop_record.setAttribute("hidden",true);
             stop_record.onclick = function () {
-                document.getElementById("simple_stop_record_button").setAttribute("disabled", true);
-                document.getElementById("simple_record_button").removeAttribute("disabled");
+                stop.setAttribute("hidden", true);
+                start.removeAttribute("hidden");
                 recorder.stop();
                 stream.getVideoTracks()[0].stop();
             }
