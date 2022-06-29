@@ -1,4 +1,4 @@
-        var version = "0.0.29_7";
+        var version = "0.0.29_8";
 
         
         console.log("version: "+version);
@@ -57,7 +57,7 @@
 
                 var regex = /(\S*)-(\S*)_(\S*) (\S*)/gi;
                 match = regex.exec(text);
-                    
+                if(match.length>=4){
                 var gr_type = match[1];
                 var gr_name = match[2];
                 var st_snam = match[3];
@@ -72,6 +72,7 @@
                 if(gr_name=="20Б") {gr_name="20б";}
                 if(gr_name=="20Г") {gr_name="20г";}
                 if(gr_name=="20г") {gr_name="20Г";}
+                }
 
             }
         }
