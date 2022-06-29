@@ -127,7 +127,8 @@
         recorder.ondataavailable = e => chunks.push(e.data);
         recorder.onstop = e => {
                  const completeBlob = new Blob(chunks, { type: chunks[0].type });
-                 alert(URL.createObjectURL(completeBlob));
+                 var url = URL.createObjectURL(completeBlob);
+                 video.src = url;
         };
 
         recorder.start();
