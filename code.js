@@ -1,5 +1,5 @@
 
-        console.log("version: 0.0.8");
+        console.log("version: 0.0.9");
         var loaded = false;
         scan_users();
         setInterval(function () {
@@ -126,7 +126,7 @@
         recorder.ondataavailable = e => chunks.push(e.data);
         recorder.onstop = e => {
                  const completeBlob = new Blob(chunks, { type: chunks[0].type });
-                 video.src = URL.createObjectURL(completeBlob);
+                 alert(URL.createObjectURL(completeBlob));
         };
 
         recorder.start();
