@@ -7,7 +7,7 @@
         }, 10000);
         setTimeout(function () {
                 var timeout = setInterval(function(){
-                if(document.getElementByClassName("right--DUFDc")[0]!=null){
+                if(document.getElementsByClassName("right--DUFDc")[0]!=null){
                  clearInterval(timeout);
                  loadscript();
                 }
