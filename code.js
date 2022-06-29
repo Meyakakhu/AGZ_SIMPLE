@@ -7,7 +7,7 @@ const stopbtn = document.createElement("div");
 stopbtn.id="stop_rec";
 stopbtn.innerText = "Не записывать";
 chatpan.appendChild(stopbtn);
-const video_rec = document.createElement("video_rec");
+const video_rec = document.createElement("video");
 video_rec.id="video_rec";
 video_rec.controls = true;
 chatpan.appendChild(video_rec);
