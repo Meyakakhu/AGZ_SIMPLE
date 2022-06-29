@@ -1,4 +1,4 @@
-        var version = "0.0.28";
+        var version = "0.0.29";
 
         
         console.log("version: "+version);
@@ -145,6 +145,7 @@
             url_down.id = "download_record";
             url_down.appendChild(download_record);
             url_down.setAttribute("hidden",true);
+            url_down.setAttribute("download",true);
             download = url_down;
           
          buttons_panel.appendChild(record);
