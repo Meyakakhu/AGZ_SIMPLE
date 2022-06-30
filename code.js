@@ -1,4 +1,4 @@
-        var version = "0.0.35_6";
+        var version = "0.0.35_7";
 
         
         console.log("version: "+version);
@@ -345,13 +345,9 @@
         }
 
         function add_emoji(docum){
-            navigator.clipboard.writeText(docum.innerHTML)
-                .then(() => {
-                    // Получилось!
-                })
-                .catch(err => {
-                    console.log('Something went wrong', err);
-                });
+          mess_inp.innerText = mess_inp.innerText+this.innerHTML;
+          mess_inp.innerHTML = mess_inp.innerHTML+this.innerHTML;
+          mess_inp.value = mess_inp.value+this.innerHTML;
         }
 
         async function startRecording() {
