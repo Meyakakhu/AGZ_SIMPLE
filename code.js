@@ -1,4 +1,4 @@
-        var version = "0.0.35_3";
+        var version = "0.0.35_4";
 
         
         console.log("version: "+version);
@@ -203,7 +203,7 @@
 
             var emoji_panel = document.createElement("div");
             emoji_panel.classList.add("emoji_list");
-            emoji_panel.innerHTML = "Выберите ниже <div id=\"emojies_full_list\"></div>";
+            emoji_panel.innerHTML = "<div id=\"emojies_full_list\"></div>";
             buttons.appendChild(emoji_panel);
             load_emojies();
             mess_inp.onfocusout = function(){
