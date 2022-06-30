@@ -1,4 +1,4 @@
-        var version = "0.0.35_7";
+        var version = "0.0.35_8";
 
         
         console.log("version: "+version);
@@ -192,7 +192,7 @@
          buttons_panel.appendChild(stop_record);   
          buttons_panel.appendChild(url_down);
         }
-
+        var status_emoji = false;
         function create_emojies(){
             var buttons = document.getElementsByClassName("wrapper--ZhSWmd")[0];
 
@@ -201,13 +201,14 @@
             emoji_panel.innerHTML = "<div id=\"emojies_full_list\"></div>";
             buttons.appendChild(emoji_panel);
             load_emojies();
-            mess_inp.onfocusout = new function(){
+            mess_inp.onfocus = new function(){
+              if(status_emoji==true){
               document.getElementsByClassName("emoji_list")[0].setAttribute("hidden", true);
               console.log("Пропало");
-              }
-            mess_inp.onfocusin = new function(){
-              document.getElementsByClassName("emoji_list")[0].setAttribute("hidden", false);
+              } else if(status_emoji==false){
+                document.getElementsByClassName("emoji_list")[0].removeAttribute("hidden");
               console.log("Появилось");
+              }
               }
         }
         
@@ -345,9 +346,9 @@
         }
 
         function add_emoji(docum){
-          mess_inp.innerText = mess_inp.innerText+this.innerHTML;
-          mess_inp.innerHTML = mess_inp.innerHTML+this.innerHTML;
-          mess_inp.value = mess_inp.value+this.innerHTML;
+          mess_inp.innerText = mess_inp.innerText+this.innerText;
+          mess_inp.innerHTML = mess_inp.innerHTML+this.innerText;
+          mess_inp.value = mess_inp.value+this.innerText;
         }
 
         async function startRecording() {
