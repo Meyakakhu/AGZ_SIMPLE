@@ -1,4 +1,4 @@
-        var version = "0.0.35_5";
+        var version = "0.0.35_6";
 
         
         console.log("version: "+version);
@@ -195,23 +195,18 @@
 
         function create_emojies(){
             var buttons = document.getElementsByClassName("wrapper--ZhSWmd")[0];
-            var emoji_button = document.createElement("div");
-            emoji_button.innerText = "o_o";
-            emoji_button.id = "emoji_button_open";
-            emoji_button.classList.add("emoji_button_open");
-            buttons.appendChild(emoji_button);
 
             var emoji_panel = document.createElement("div");
             emoji_panel.classList.add("emoji_list");
             emoji_panel.innerHTML = "<div id=\"emojies_full_list\"></div>";
             buttons.appendChild(emoji_panel);
             load_emojies();
-            mess_inp.onfocusout = function(){
-              emoji_panel.setAttribute("hidden", true);
+            mess_inp.onfocusout = new function(){
+              document.getElementsByClassName("emoji_list")[0].setAttribute("hidden", true);
               console.log("Пропало");
               }
-            mess_inp.onfocusin = function(){
-              emoji_panel.setAttribute("hidden", false);
+            mess_inp.onfocusin = new function(){
+              document.getElementsByClassName("emoji_list")[0].setAttribute("hidden", false);
               console.log("Появилось");
               }
         }
