@@ -1,4 +1,4 @@
-        var version = "0.0.35_4";
+        var version = "0.0.35_5";
 
         
         console.log("version: "+version);
@@ -210,7 +210,7 @@
               emoji_panel.setAttribute("hidden", true);
               console.log("Пропало");
               }
-            mess_inp.onfocus = function(){
+            mess_inp.onfocusin = function(){
               emoji_panel.setAttribute("hidden", false);
               console.log("Появилось");
               }
