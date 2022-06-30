@@ -1,4 +1,4 @@
-        var version = "0.0.35_1";
+        var version = "0.0.35_2";
 
         
         console.log("version: "+version);
@@ -104,8 +104,8 @@
             style.innerText = style.innerText + "span{text-transform: capitalize;}a{text-decoration:none;}";
             style.innerText = style.innerText + ".group_name{padding:5px; color: #ddd;}";
             style.innerText = style.innerText + ".group_name{padding:5px; color: #ddd;}";
-            style.innerText = style.innerText + ".emoji_list{color: #fff;padding:20px;background: rgba(0,0,0,0.7); border-radius: 10px;text-align: center;font-family: 'Consolas';font-size: 20px;height: 220px;overflow: auto;position:absolute;top:-250px;z-index:99;margin:20px;}";
-            style.innerText = style.innerText + ".emoji{font-size: 21px;padding:3px;}div#emojies_full_list {display: flex;flex-wrap: wrap;justify-content: space-between;align-content: space-around;align-items: center;}";
+            style.innerText = style.innerText + ".emoji_list{color: #fff;padding:7px;background: rgba(0,0,0,0.7); border-radius: 10px;text-align: center;font-family: 'Consolas';font-size: 17px;height: 64px;overflow: auto;position:absolute;top:-58px;z-index:99;margin:-8px;width:100%;}";
+            style.innerText = style.innerText + ".emoji{font-size: 21px;padding:3px;}div#emojies_full_list {display: flex}";
             
             
             head.appendChild(style);
@@ -206,6 +206,12 @@
             emoji_panel.innerHTML = "Выберите ниже <div id=\"emojies_full_list\"></div>";
             buttons.appendChild(emoji_panel);
             load_emojies();
+            mess_inp.onfocusout = function(){
+            emoji_panel.hidden = true;
+            }
+            mess_inp.onfocus = function(){
+              emoji_panel.hidden = false;
+              }
         }
         
         async function load_emojies(){
